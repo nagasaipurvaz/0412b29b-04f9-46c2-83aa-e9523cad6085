@@ -15,6 +15,3 @@ order by s_id;
 
 --the below is used to give deired number to s_num and can see the result jut by executing code.....
 select s_id,agency from HR_DEPARTMENT where S_ID=&s_num;
-
-
-
