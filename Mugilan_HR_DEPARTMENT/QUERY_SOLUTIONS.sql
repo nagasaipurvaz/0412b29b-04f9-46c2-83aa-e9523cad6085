@@ -11,19 +11,19 @@ GROUP BY AGENCY; --Elapsed:  00:00:00:03
 
 -- 2) WRITE A SQL QUERY TO LIST THE EMPLOYEES WHO ARE ALL CONTRACTUAL WORKER :
 
-SELECT "Employee Name" FROM HR_DEPARTMENT
+SELECT "Employee Name" as "CONTRACTUAL WORKERS" FROM HR_DEPARTMENT
 WHERE "Position Title" = 'CONTRACTUAL WORKER'; --Elapsed:  00:00:00:06
     
 /*To optimize the query ,create index on position title so it return the result faster */
 create  index hr_position on HR_DEPARTMENT ("Position Title");
 
-SELECT "Employee Name" FROM HR_DEPARTMENT
+SELECT "Employee Name" AS "CONTRACTUAL WORKERS" FROM HR_DEPARTMENT
 WHERE "Position Title" = 'CONTRACTUAL WORKER' ;--Elapsed:  00:00:00:05
 
 -- 3) WRITE A SQL QUERY TO LIST THE EMPLOYEE NAME WORK UNDER AGENCY ABE LINCON PRES LIBRARY  MUS2 : 
 
 SELECT "Employee Name" FROM HR_DEPARTMENT
-WHERE AGENCY = 'ABE LINCOLN PRES LIBRARY & MUS'; --Elapsed:  00:00:00:06
+WHERE AGENCY = 'ABE LINCOLN PRES LIBRARY MUS2'; --Elapsed:  00:00:00:06
 
 /*To optimize the query ,create index on agency title so it return the result faster */
 create index hr_agency on hr_department (agency);
